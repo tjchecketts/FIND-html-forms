@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>HTML Forms</title>
+</head>
+<body>
+  <div>This is an HTML Forms Practice</div>
+  
+  <form>
+    <div>Enter your First Name here: </div>
+    <input type="text" placeholder="First Name" name="firstname" required>
+    
+    <div>Enter your Last Name here: </div>
+    <input type="text" placeholder="Last Name" name="lastname" required>
+
+    <div>What is your favorite date?</div>
+    <input type="date" name="date">
+    
+    <div>Select your favorite car:</div>
+    <!-- checked -->
+    <input type="radio" name="car" value="tesla"> Tesla
+    <input type="radio" name="car" value="ford"> Ford
+    <input type="radio" name="car" value="porsche"> Porsche 
+    
+    <div>Favorite social media?</div>
+    <select name="social">
+      <option value="twitter">Twitter</option>
+      <option value="snapchat">Snapchat</option>
+      <option value="insta">Instagram</option>
+      <option value="facebook">Facebook</option>
+    </select>
+    
+    <div>Types of shows?</div>
+    <!-- checked="checked" -->
+    <input type="checkbox" name="shows" value="movies"> I like movies<br>
+    <input type="checkbox" name="shows" value="tvshows"> I like TV shows<br>
+    <input type="checkbox" name="shows" value="plays"> I like plays<br>
+
+    <div>Tell us more about yourself?</div>
+    <textarea name="comment" placeholder="Type out a comment"></textarea>
+
+    <br>
+    <button onclick="submit">Submit Form</button>
+  </form>
+</body>
+</html>
