@@ -4,7 +4,6 @@ $(function() {
       output,
       limit,
       zero,
-      period,
       operator
 
   // screen = document.getElementById("result")
@@ -12,15 +11,16 @@ $(function() {
   // var elem = document.querySelectorAll(".num")
   var elem = $(".num")
   var len = elem.length
-  for(var i = 0; i < len; i++ ) {
+  for(var i = 0; i < len; i++) {
     elem[i].addEventListener("click",function() { 
-    num = this.value;  
-    output = screen.innerHTML +=num;
-    limit = output.length;
-    if(limit > 10 ) {
-      alert("Sorry no more input is allowed");
-    }
-    },false);
+      if(limit > 10) {
+        alert("Your number is too big")
+      } else {
+        num = this.value  
+        output = screen.innerHTML +=num
+        limit = output.length
+      }
+    }, false)
   }
 
   // document.querySelector(".zero").addEventListener("click", function() {
@@ -31,7 +31,7 @@ $(function() {
       output = screen.innerHTML = zero
     }
     else if(screen.innerHTML === output) {
-      output = screen.innerHTML +=zero
+      output = screen.innerHTML += zero
     }
   // }, false)
   })
@@ -39,34 +39,33 @@ $(function() {
   // document.querySelector("#delete").addEventListener("click",function() {
   // $("#delete")[0].addEventListener("click", function() {
   $("#delete").click(function() {
-    screen.innerHTML = "";
+    screen.innerHTML = ""
   // }, false)
-  });
+  })
 
   // document.querySelector("#equals").addEventListener("click", function() {
   // $("#equals")[0].addEventListener("click", function() {
   $("#equals").click(function() {
     if(screen.innerHTML === output) {
       screen.innerHTML = eval(output)
-    }
-    else {
+    } else {
       screen.innerHTML = ""
     }
   // }, false)
   })
 
-  // var elem1 = document.querySelectorAll(".operator");
+  // var elem1 = document.querySelectorAll(".operator")
   var elem1 = $(".operator")
-  var len1 = elem1.length;
-  for(var i = 0; i < len1; i++ ) {
+  var len1 = elem1.length
+  for(var i = 0; i < len1; i++) {
     elem1[i].addEventListener("click",function() {
-    operator = this.value;
+    operator = this.value
       if(screen.innerHTML === "") {
-        screen.innerHTML = screen.innerHTML.concat("");
+        screen.innerHTML = screen.innerHTML.concat("")
       }
       else if(output) {
-          screen.innerHTML = output.concat(operator);
+        screen.innerHTML = output.concat(operator)
       }
-    },false);
+    }, false)
   }  
-});
+})
