@@ -4,10 +4,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Calculator</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <h1>My Own Calculator</h1>
+  <h1 class="bg-info">My Very Own Calculator</h1>
+  
+  <div class="rows">
+    <button value="1" class="btn-default btn-lg num">1</button>
+    <button value="2" class="btn-default btn-lg num">2</button>
+    <button value="3" class="btn-default btn-lg num">3</button>
+    <button value="+" class="btn-default btn-lg operator">+</button>
+  </div>
+  
+  <div class="rows">
+    <button value="4" class="btn-default btn-lg num">4</button>
+    <button value="5" class="btn-default btn-lg num">5</button>
+    <button value="6" class="btn-default btn-lg num">6</button>
+    <button value="-" class="btn-default btn-lg operator">-</button>
+  </div>
+  
+  
+  <div class="rows">
+    <button value="7" class="btn-default btn-lg num">7</button>
+    <button value="8" class="btn-default btn-lg num">8</button>
+    <button value="9" class="btn-default btn-lg num">9</button>
+    <button value="*" class="btn-default btn-lg operator">*</button>
+  </div>
+  
+  <div class="rows">
+    <button id="delete" class="btn-warning btn-lg">CLEAR</button>
+    <button value="0" id="delete" class="btn-default btn-lg num zero">0</button>
+    <button value="/" class="btn-default btn-lg operator">/</button>
+  </div>
+  
+  <div class="rows">
+    <button class="btn-success btn-lg">=</button>
+  </div>
+  
+  <div id="result"> </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>

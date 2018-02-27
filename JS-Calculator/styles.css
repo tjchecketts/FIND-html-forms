@@ -1,3 +1,11 @@
 html {
   text-align: center;
 }
+
+body {
+  background: lightgray;
+}
+
+#result {
+  font-size: 20px;
+}
