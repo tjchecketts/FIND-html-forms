@@ -1,4 +1,4 @@
-$(function(){
+$(function() {
   var current,
       screen,
       output,
@@ -7,9 +7,11 @@ $(function(){
       period,
       operator
 
-  screen = document.getElementById("result");
-  var elem = document.querySelectorAll(".num");
-  var len = elem.length;
+  // screen = document.getElementById("result")
+  screen = $("#result")[0]
+  // var elem = document.querySelectorAll(".num")
+  var elem = $(".num")
+  var len = elem.length
   for(var i = 0; i < len; i++ ) {
     elem[i].addEventListener("click",function() { 
     num = this.value;  
@@ -21,7 +23,9 @@ $(function(){
     },false);
   }
 
-  document.querySelector(".zero").addEventListener("click", function() {
+  // document.querySelector(".zero").addEventListener("click", function() {
+  // $(".zero")[0].addEventListener("click", function() {
+  $(".zero").click(function() {
     zero = this.value
     if(screen.innerHTML === "") {
       output = screen.innerHTML = zero
@@ -29,13 +33,30 @@ $(function(){
     else if(screen.innerHTML === output) {
       output = screen.innerHTML +=zero
     }
-  }, false)
+  // }, false)
+  })
 
-  document.querySelector("#delete").addEventListener("click",function() {
+  // document.querySelector("#delete").addEventListener("click",function() {
+  // $("#delete")[0].addEventListener("click", function() {
+  $("#delete").click(function() {
     screen.innerHTML = "";
-  },false);
+  // }, false)
+  });
 
-  var elem1 = document.querySelectorAll(".operator");
+  // document.querySelector("#equals").addEventListener("click", function() {
+  // $("#equals")[0].addEventListener("click", function() {
+  $("#equals").click(function() {
+    if(screen.innerHTML === output) {
+      screen.innerHTML = eval(output)
+    }
+    else {
+      screen.innerHTML = ""
+    }
+  // }, false)
+  })
+
+  // var elem1 = document.querySelectorAll(".operator");
+  var elem1 = $(".operator")
   var len1 = elem1.length;
   for(var i = 0; i < len1; i++ ) {
     elem1[i].addEventListener("click",function() {
